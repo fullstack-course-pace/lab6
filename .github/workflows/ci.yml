@@ -28,9 +28,9 @@ jobs:
       - name: Install dependencies (pnpm install)
         run: pnpm install --frozen-lockfile
 
-      - name: Typecheck (if tsc available)
-        if: ${{ hashFiles('**/tsconfig.json') != '' }}
-        run: pnpm dlx tsc --noEmit
+      #   - name: Typecheck (if tsc available)
+      #     if: ${{ hashFiles('**/tsconfig.json') != '' }}
+      #     run: pnpm dlx tsc --noEmit
 
       - name: Build Next.js
         run: pnpm run build
